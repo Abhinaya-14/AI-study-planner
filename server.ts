@@ -196,7 +196,12 @@ async function startServer() {
   } else {
     app.use(express.static(path.join(__dirname, "dist")));
     app.get("*", (_req, res) => {
-      res.sendFile(path.join(__dirname, "dist", "index.html"));
+      res.sendFile(path.join(__dirname, "dist", "index.html"), (err) => {
+        if (err) {
+          console.error("Error serving index.html:", err);
+          res.status(500).send("Error loading app");
+        }
+      });
     });
   }
 
