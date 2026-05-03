@@ -187,7 +187,7 @@ async function startServer() {
   });
 
   // --- Vite / Static ---
-  if (process.env.NODE_ENV !== "production") {
+  if (process.env.NODE_ENV === "development") {
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
