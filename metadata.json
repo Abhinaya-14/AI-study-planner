@@ -1,0 +1,5 @@
+{
+  "name": "AI Study Planner",
+  "description": "An intelligent study scheduling application that uses AI to generate personalized study plans, track progress, and optimize learning efficiency.",
+  "requestFramePermissions": []
+}
